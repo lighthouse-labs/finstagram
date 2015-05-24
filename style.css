@@ -1,0 +1,73 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  color: #244751;
+}
+
+a {
+  color: #8da7b8;
+  text-decoration: none;
+}
+
+header {
+  background-color: #244751;
+  color: #E8FDFF;
+  overflow: hidden;
+  padding: 0 2em;
+}
+
+main {
+  width: 450px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.post {
+  margin-bottom: 2em;
+}
+
+.user-info {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 1em;
+}
+
+.user-info img {
+  width: 40px;
+}
+
+.user-info h2 {
+  margin: 0 0 0 .5em;
+}
+
+.user-info h3 {
+  margin: 0 0 0 auto;
+}
+
+.photo img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.photo .actions {
+  display: flex;
+  align-items: baseline;
+}
+
+.photo .actions a {
+  margin-right: .5em;
+  padding: .5em;
+  border: solid 1px #244751;
+  display: inline-block;
+}
+
+.photo .like-count {
+  margin-left: auto;
+}
+
+.photo .comments {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
