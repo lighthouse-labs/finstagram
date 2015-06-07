@@ -1,4 +1,4 @@
-body {
+body, input {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   color: #244751;
@@ -7,6 +7,18 @@ body {
 a {
   color: #8da7b8;
   text-decoration: none;
+}
+
+label {
+  display: block;
+  margin-bottom: .25em;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  border: solid 1px #244751;
+  padding: 1em .75em;
+  width: 200px;
+  font-size: 1em;
 }
 
 header {
@@ -33,10 +45,13 @@ main {
   margin-bottom: 2em;
 }
 
+.post > * {
+  margin-bottom: 1em;
+}
+
 .user-info {
   display: flex;
   align-items: baseline;
-  padding-bottom: 1em;
 }
 
 .user-info img {
@@ -51,27 +66,36 @@ main {
   margin: 0 0 0 auto;
 }
 
-.photo img {
-  width: 100%;
+.photo {
   display: block;
-  margin-bottom: 1em;
 }
 
-.photo .actions {
+.photo img {
+  display: block;
+  width: 100%;
+}
+
+.actions {
   display: flex;
   align-items: baseline;
 }
 
-.photo .actions a {
+.actions a {
   margin-right: .5em;
 }
 
-.photo .like-count {
+.like-count {
   margin-left: auto;
 }
 
-.photo .comments {
-  margin: 0;
+.comments {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.form-group {
+  margin-bottom: 1em;
 }

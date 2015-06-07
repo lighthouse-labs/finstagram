@@ -1,0 +1,3 @@
+# home
+get '/' do
+end
