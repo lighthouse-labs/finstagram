@@ -9,15 +9,24 @@ end
 # home
 get '/' do
   post = { 
-    username: "sharky_j", 
-    avatar_url: "http://naserca.com/images/sharky_j.jpg", 
+    user: {
+      username: "sharky_j",
+      avatar_url: "http://naserca.com/images/sharky_j.jpg"
+    }, 
     photo_url: "http://naserca.com/images/shark.jpg", 
     time_ago_in_minutes: humanized_time_ago(15), 
     like_count: 12, 
-    comments: [ 
-      "sharky_j: Out for the long weekend… too embarrassed to show y’all the beach bod!", 
-      "mrs_sharksmith59: Joanna! Not appropriate!"
-    ] 
+    comments: [{
+      user: {
+        username: "sharky_j",
+      },
+      text: "Out for the long weekend… too embarrassed to show y’all the beach bod!"
+    }, {
+      user: {
+        username: "mrs_sharksmith59",
+      },
+      text: "Joanna! Not appropriate!"
+    }]
   }
   erb post.to_s
 end
