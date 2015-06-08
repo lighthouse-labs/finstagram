@@ -8,7 +8,7 @@ end
 
 # home
 get '/' do
-  post_0 = { 
+  posts = [{ 
     user: {
       username: "sharky_j",
       avatar_url: "http://naserca.com/images/sharky_j.jpg"
@@ -27,9 +27,7 @@ get '/' do
       },
       text: "Joanna! Not appropriate!"
     }]
-  }
-
-  post_1 = { 
+  }, {
     user: {
       username: "kirk_whalum",
       avatar_url: "http://naserca.com/images/kirk_whalum.jpg"
@@ -43,9 +41,7 @@ get '/' do
       },
       text: "#weekendvibes"
     }]
-  }
-
-  post_2 = { 
+  }, { 
     user: {
       username: "marlin_peppa",
       avatar_url: "http://naserca.com/images/marlin_peppa.jpg"
@@ -59,8 +55,6 @@ get '/' do
       },
       text: "lunchtime!"
     }]
-  }
-
-  posts = [post_0, post_1, post_2]
+  }]
   erb posts.to_s
 end
