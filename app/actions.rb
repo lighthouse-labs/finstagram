@@ -8,7 +8,7 @@ end
 
 # home
 get '/' do
-  post = { 
+  post_0 = { 
     user: {
       username: "sharky_j",
       avatar_url: "http://naserca.com/images/sharky_j.jpg"
@@ -28,5 +28,39 @@ get '/' do
       text: "Joanna! Not appropriate!"
     }]
   }
-  erb post.to_s
+
+  post_1 = { 
+    user: {
+      username: "kirk_whalum",
+      avatar_url: "http://naserca.com/images/kirk_whalum.jpg"
+    }, 
+    photo_url: "http://naserca.com/images/whale.jpg", 
+    time_ago_in_minutes: humanized_time_ago(72), 
+    like_count: 30, 
+    comments: [{
+      user: {
+        username: "kirk_whalum",
+      },
+      text: "#weekendvibes"
+    }]
+  }
+
+  post_2 = { 
+    user: {
+      username: "marlin_peppa",
+      avatar_url: "http://naserca.com/images/marlin_peppa.jpg"
+    }, 
+    photo_url: "http://naserca.com/images/marlin.jpg", 
+    time_ago_in_minutes: humanized_time_ago(201), 
+    like_count: 28, 
+    comments: [{
+      user: {
+        username: "marlin_peppa",
+      },
+      text: "lunchtime!"
+    }]
+  }
+
+  posts = [post_0, post_1, post_2]
+  erb posts.to_s
 end
