@@ -8,7 +8,7 @@ end
 
 # home
 get '/' do
-  posts = [{ 
+  @posts = [{ 
     user: {
       username: "sharky_j",
       avatar_url: "http://naserca.com/images/sharky_j.jpg"
@@ -56,5 +56,6 @@ get '/' do
       text: "lunchtime!"
     }]
   }]
-  erb posts.to_s
+
+  erb :index
 end
