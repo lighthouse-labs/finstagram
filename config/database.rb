@@ -6,7 +6,7 @@ configure do
 
   set :database, {
     adapter: "sqlite3",
-    database: "db/finstagram_dev.sqlite3"
+    database: "db/db.sqlite3"
   }
 
   # Load all models from app/models, using autoload instead of require

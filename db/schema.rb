@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 0) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
+    t.integer  "post_id"
     t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 0) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
+    t.string   "avatar_url"
     t.string   "email"
     t.string   "password"
     t.datetime "created_at"

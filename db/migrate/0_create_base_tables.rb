@@ -3,6 +3,7 @@ class CreateBaseTables < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :username
+      t.string :avatar_url
       t.string :email
       t.string :password
       t.timestamps
@@ -16,6 +17,7 @@ class CreateBaseTables < ActiveRecord::Migration
 
     create_table :comments do |t|
       t.references :user
+      t.references :post
       t.text :text
       t.timestamps
     end
