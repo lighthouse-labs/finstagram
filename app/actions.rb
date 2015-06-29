@@ -9,11 +9,6 @@ get '/signup' do
 end
 
 post '/signup' do
-  user = User.create(
-    email:      params[:email],
-    avatar_url: params[:avatar_url],
-    username:   params[:username],
-    password:   params[:password]
-  )
+  user = User.create params.slice('email', 'avatar_url', 'username', 'password')
   erb user.email
 end
