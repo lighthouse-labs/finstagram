@@ -5,14 +5,15 @@ get '/' do
 end
 
 get '/signup' do
+  @user = User.new
   erb :signup
 end
 
 post '/signup' do
-  if params['email'].present? && params['avatar_url'].present? && params['username'].present? && params['password'].present?
-    user = User.create params.slice('email', 'avatar_url', 'username', 'password')
+  @user = User.new params.slice('email', 'avatar_url', 'username', 'password')
+  if @user.save
     redirect to("/")
   else
-    erb "Please complete all fields."
+    erb :signup, errors: @user.errors
   end
 end
