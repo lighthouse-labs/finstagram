@@ -9,4 +9,7 @@ class User < ActiveRecord::Base
                         :username,
                         :password
 
+  validates_uniqueness_of :email,
+                          :username
+
 end
