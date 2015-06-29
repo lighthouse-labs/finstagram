@@ -9,6 +9,11 @@ get '/signup' do
 end
 
 post '/signup' do
-  session[:email] = params[:email]
-  erb session[:email]
+  user = User.create(
+    email:      params[:email],
+    avatar_url: params[:avatar_url],
+    username:   params[:username],
+    password:   params[:password]
+  )
+  erb user.email
 end
