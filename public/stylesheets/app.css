@@ -26,6 +26,12 @@ header {
   color: #E8FDFF;
   overflow: hidden;
   padding: 0 2em;
+  display: flex;
+  align-items: baseline;
+}
+
+header > .login-info {
+  margin-left: auto;
 }
 
 main {

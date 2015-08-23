@@ -17,6 +17,17 @@
   <title>Finstagram</title>
 </head>
 <body>
+  <header>
+    <h1>Finstagram</h1>
+    <div class="login-info">
+      <% if current_user %>
+        <%= current_user.username %>
+      <% else %>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+      <% end %>
+    </div>
+  </header>
   <%= yield %>
 </body>
 </html>
