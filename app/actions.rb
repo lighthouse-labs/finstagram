@@ -42,3 +42,17 @@ get '/logout' do
   session[:user_id] = nil
   redirect to("/")
 end
+
+get '/posts/new' do
+  @post = Post.new
+  erb :"posts/new"
+end
+
+post '/posts' do
+  @post = Post.new params.slice('photo_url', 'user_id')
+  if @post.save
+    redirect to("/")
+  else
+    erb :"posts/new"
+  end
+end
