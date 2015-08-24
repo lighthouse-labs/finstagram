@@ -66,3 +66,13 @@ post '/comments' do
   Comment.create params.slice('text', 'post_id', 'user_id')
   redirect back
 end
+
+post '/likes' do
+  Like.create params.slice('post_id', 'user_id')
+  redirect back
+end
+
+delete '/likes/:id' do
+  Like.find(params[:id]).destroy
+  redirect back
+end

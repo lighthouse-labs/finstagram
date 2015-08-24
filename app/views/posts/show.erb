@@ -11,6 +11,18 @@
       <img src="<%= @post.photo_url %>" alt="post from <%= @post.user.username %>">
     </a>
     <div class="actions">
+      <% if like = current_user.like_for_post_id(@post.id) %>
+        <form action="/likes/<%= like.id %>" method="POST">
+          <input name="_method" type="hidden" value="delete">
+          <button class="button" type="submit">Unlike</button>
+        </form>
+      <% else %>
+        <form action="/likes" method="POST">
+          <input type="hidden" name="user_id" value="<%= current_user.id %>">
+          <input type="hidden" name="post_id" value="<%= @post.id %>">
+          <button class="button" type="submit">Like</button>
+        </form>
+      <% end %>
       <span class="like-count"><%= @post.like_count %> likes</span>
     </div>
 
