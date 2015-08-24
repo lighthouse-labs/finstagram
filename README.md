@@ -1,9 +1,7 @@
-Sinatra
-=============
+# Finstagram (dev)
+#### a dev repo for the web fundamentals app.
 
-Brought to you by Lighthouse Labs
-
-## Getting Started
+## development
 
 1. `bundle install`
 2. `shotgun -p 3000 -o 0.0.0.0`
