@@ -48,6 +48,11 @@ get '/posts/new' do
   erb :"posts/new"
 end
 
+get '/posts/:id' do
+  @post = Post.find params[:id]
+  erb :"posts/show"
+end
+
 post '/posts' do
   @post = Post.new params.slice('photo_url', 'user_id')
   if @post.save
@@ -55,4 +60,9 @@ post '/posts' do
   else
     erb :"posts/new"
   end
+end
+
+post '/comments' do
+  Comment.create params.slice('text', 'post_id', 'user_id')
+  redirect back
 end

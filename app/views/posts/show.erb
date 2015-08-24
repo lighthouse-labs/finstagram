@@ -1,0 +1,38 @@
+<main role="main">
+  <article class="post">
+    <div class="user-info">
+      <img src="<%= @post.user.avatar_url %>" alt="<%= @post.user.username %>">
+      <h2>
+        <a href="#"><%= @post.user.username %></a>
+      </h2>
+      <h3><%= @post.humanized_time_ago %></h3>
+    </div>
+    <a class="photo" href="#">
+      <img src="<%= @post.photo_url %>" alt="post from <%= @post.user.username %>">
+    </a>
+    <div class="actions">
+      <span class="like-count"><%= @post.like_count %> likes</span>
+    </div>
+
+    <form class="new-comment" action="/comments" method="POST">
+      <div class="form-group">
+        <input type="text" id="text" name="text">
+      </div>
+      <input type="hidden" id="user_id" name="user_id" value="<%= current_user.id %>">
+      <input type="hidden" id="post_id" name="post_id" value="<%= @post.id %>">
+      <div class="form-group">
+        <button class="button" type="submit">Comment</button>
+      </div>
+    </form>
+
+    <ul class="comments">
+      <% @post.comments.each do |comment| %>
+        <li>
+          <p>
+            <a href="#"><%= comment.user.username %>:</a> <%= comment.text %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  </article>
+</main>

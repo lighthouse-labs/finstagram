@@ -11,12 +11,11 @@
         </h2>
         <h3><%= post.humanized_time_ago %></h3>
       </div>
-      <a class="photo" href="#">
+      <a class="photo" href="/posts/<%= post.id %>">
         <img src="<%= post.photo_url %>" alt="post from <%= post.user.username %>">
       </a>
       <div class="actions">
         <a class="button" href="#">Like</a>
-        <a class="button" href="#">Comment</a>
         <span class="like-count"><%= post.like_count %> likes</span>
       </div>
       <ul class="comments">

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body, input {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
@@ -16,7 +20,7 @@ label {
 
 input[type=text], input[type=password], input[type=email] {
   border: solid 1px #244751;
-  padding: 1em .75em;
+  padding: .5em;
   width: 200px;
   font-size: 1em;
 }
@@ -117,4 +121,8 @@ main {
 
 .form-group {
   margin-bottom: 1em;
+}
+
+.new-comment input[type="text"] {
+  width: 100%;
 }
