@@ -16,6 +16,8 @@
         </button>
       </form>
     <% end %>
+  <% else %>
+    <%= post.like_count %> likes
   <% end %>
   <span class="comment-count"><%= post.comment_count %> comments</span>
 </div>
