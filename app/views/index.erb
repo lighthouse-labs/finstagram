@@ -1,43 +1,6 @@
-<main role="main">
-  <div class="new-post">
-    <a href="/posts/new" class="button">New Post</a>
-  </div>
-  <% @posts.each do |post| %>
-    <article class="post">
-      <div class="user-info">
-        <img src="<%= post.user.avatar_url %>" alt="<%= post.user.username %>">
-        <h2>
-          <a href="#"><%= post.user.username %></a>
-        </h2>
-        <h3><%= post.humanized_time_ago %></h3>
-      </div>
-      <a class="photo" href="/posts/<%= post.id %>">
-        <img src="<%= post.photo_url %>" alt="post from <%= post.user.username %>">
-      </a>
-      <div class="actions">
-        <% if like = current_user.like_for_post_id(post.id) %>
-          <form action="/likes/<%= like.id %>" method="POST">
-            <input name="_method" type="hidden" value="delete">
-            <button class="button" type="submit">Unlike</button>
-          </form>
-        <% else %>
-          <form action="/likes" method="POST">
-            <input type="hidden" name="user_id" value="<%= current_user.id %>">
-            <input type="hidden" name="post_id" value="<%= post.id %>">
-            <button class="button" type="submit">Like</button>
-          </form>
-        <% end %>
-        <span class="like-count"><%= post.like_count %> likes</span>
-      </div>
-      <ul class="comments">
-        <% post.comments.each do |comment| %>
-          <li>
-            <p>
-              <a href="#"><%= comment.user.username %>:</a> <%= comment.text %>
-            </p>
-          </li>
-        <% end %>
-      </ul>
-    </article>
-  <% end %>
-</main>
+<div class="new-post">
+  <a href="/posts/new" class="button">New Post</a>
+</div>
+<% @posts.each do |post| %>
+  <%= erb :'shared/post', locals: { post: post, show_comment_form: false  } %>
+<% end %>

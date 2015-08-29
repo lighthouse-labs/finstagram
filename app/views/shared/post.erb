@@ -1,0 +1,9 @@
+<article class="post">
+  <%= erb :'shared/post/user_info', locals: { post: post } %>
+  <%= erb :'shared/post/photo', locals: { post: post } %>
+  <%= erb :'shared/post/actions', locals: { post: post } %>
+  <% if show_comment_form %>
+    <%= erb :'shared/post/comment_form', locals: { post: post } %>
+  <% end %>
+  <%= erb :'shared/post/comments', locals: { comments: post.comments } %>
+</article>

@@ -1,0 +1,10 @@
+<form class="new-comment" action="/comments" method="POST">
+  <div class="form-group">
+    <input type="text" id="text" name="text">
+  </div>
+  <input type="hidden" id="user_id" name="user_id" value="<%= current_user.id %>">
+  <input type="hidden" id="post_id" name="post_id" value="<%= post.id %>">
+  <div class="form-group">
+    <button class="button" type="submit">Comment</button>
+  </div>
+</form>
