@@ -1,24 +1,21 @@
-<main role="main">
+<% if @error_messages %>
+  <ul class="errors">
+    <% @error_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
-  <% if @error_messages %>
-    <ul class="errors">
-      <% @error_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-
-  <form action="/login" method="POST">
-    <div class="form-group">
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username">
-    </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password">
-    </div>
-    <div class="form-group">
-      <button class="button" type="submit">Login</button>
-    </div>
-  </form>
-</main>
+<form action="/login" method="POST">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+  </div>
+  <div class="form-group">
+    <button class="button" type="submit">Login</button>
+  </div>
+</form>

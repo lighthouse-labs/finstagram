@@ -1,21 +1,18 @@
-<main role="main">
+<h2>New Post</h2>
 
-  <h2>New Post</h2>
+<ul class="errors">
+  <% @post.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
 
-  <ul class="errors">
-    <% @post.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-
-  <form action="/posts" method="POST">
-    <div class="form-group">
-      <label for="photo_url">Photo URL</label>
-      <input type="text" id="photo_url" name="photo_url">
-    </div>
-    <input type="hidden" id="user_id" name="user_id" value="<%= current_user.id %>">
-    <div class="form-group">
-      <button class="button" type="submit">Post</button>
-    </div>
-  </form>
-</main>
+<form action="/posts" method="POST">
+  <div class="form-group">
+    <label for="photo_url">Photo URL</label>
+    <input type="text" id="photo_url" name="photo_url">
+  </div>
+  <input type="hidden" id="user_id" name="user_id" value="<%= current_user.id %>">
+  <div class="form-group">
+    <button class="button" type="submit">Post</button>
+  </div>
+</form>
