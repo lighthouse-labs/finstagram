@@ -1,6 +1,9 @@
-<div class="new-post">
-  <a href="/posts/new" class="button">New Post</a>
-</div>
+<% if current_user %>
+  <div class="new-post">
+    <a href="/posts/new" class="button">New Post</a>
+  </div>
+<% end %>
+
 <% @posts.each do |post| %>
   <%= erb :'shared/post', locals: { post: post, show_comment_form: false  } %>
 <% end %>
