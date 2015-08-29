@@ -103,11 +103,12 @@ main {
   align-items: baseline;
 }
 
-.actions a {
-  margin-right: .5em;
+.actions button.user-like {
+  color: #FF2600;
+  border-color: #FF2600;
 }
 
-.like-count {
+.actions .comment-count {
   margin-left: auto;
 }
 
