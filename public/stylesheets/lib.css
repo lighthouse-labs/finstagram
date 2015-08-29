@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body, input {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  color: #244751;
+}
+
+a {
+  color: #8da7b8;
+  text-decoration: none;
+}
+
+label {
+  display: block;
+  margin-bottom: .25em;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  border: solid 1px #244751;
+  padding: .5em;
+  width: 200px;
+  font-size: 1em;
+}
+
+header {
+  background-color: #244751;
+  color: #E8FDFF;
+  overflow: hidden;
+  padding: 0 2em;
+  display: flex;
+  align-items: baseline;
+}
+
+header > .login-info {
+  margin-left: auto;
+}
+
+main {
+  width: 450px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.new-post {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.new-post > .button {
+  display: inline-block;
+  padding: 1em;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: .5em;
+  background-color: white;
+  border: solid 1px #244751;
+  display: inline-block;
+}
+
+.post {
+  margin-bottom: 2em;
+}
+
+.post > * {
+  margin-bottom: 1em;
+}
+
+.user-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.user-info img {
+  width: 40px;
+}
+
+.user-info h2 {
+  margin: 0 0 0 .5em;
+}
+
+.user-info h3 {
+  margin: 0 0 0 auto;
+}
+
+.photo {
+  display: block;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: baseline;
+}
+
+.actions button.user-like {
+  color: #FF2600;
+  border-color: #FF2600;
+}
+
+.actions .comment-count {
+  margin-left: auto;
+}
+
+.comments {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+.new-comment input[type="text"] {
+  width: 100%;
+}

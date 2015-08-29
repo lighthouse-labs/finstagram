@@ -1,2 +1,2 @@
 # finstagram
-finstagram tutorial
+tutorial for lighthouse labs web fundamentals
