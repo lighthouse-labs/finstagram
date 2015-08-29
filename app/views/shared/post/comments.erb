@@ -2,7 +2,7 @@
   <% comments.each do |comment| %>
     <li>
       <p>
-        <a href="#"><%= comment.user.username %>:</a> <%= comment.text %>
+        <%= comment.user.username %>: <%= comment.text %>
       </p>
     </li>
   <% end %>
