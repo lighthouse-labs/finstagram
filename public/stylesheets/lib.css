@@ -26,10 +26,7 @@ input[type=text], input[type=password], input[type=email] {
 }
 
 header {
-  background-color: #244751;
-  color: #E8FDFF;
   overflow: hidden;
-  padding: 0 2em;
   display: flex;
   align-items: baseline;
 }
