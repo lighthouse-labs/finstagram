@@ -41,7 +41,6 @@ header > .login-info {
 main {
   width: 450px;
   margin: 0 auto;
-  padding: 2em;
 }
 
 .new-post {
@@ -62,10 +61,6 @@ main {
   background-color: white;
   border: solid 1px #244751;
   display: inline-block;
-}
-
-.post {
-  margin-bottom: 2em;
 }
 
 .post > * {
