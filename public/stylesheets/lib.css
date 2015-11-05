@@ -31,6 +31,10 @@ header {
   align-items: baseline;
 }
 
+header h1 {
+  margin-left: 1em;
+}
+
 header > .login-info {
   margin-left: auto;
 }
