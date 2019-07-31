@@ -1,0 +1,71 @@
+header {
+  background-image: url("https://img.freepik.com/free-photo/blue-bright-water-surface-ripple-wave-with-sun-reflection-swimming-pool_3236-123.jpg?size=626&ext=jpg");
+}
+
+h1 {
+  margin-left: 50px;
+}
+
+main {
+  background-color: white;
+  padding: 16px;
+        
+}
+
+body{
+  background-color: lightblue;
+}
+
+.finstagram-post{
+  margin-bottom: 48px;
+}
+
+.finstagram-post .user-info img{
+  border-radius: 50%;
+  padding: 3px;
+  height: 40;
+  width: 40;
+}
+.finstagram-post .user-info:hover img{
+  transition: padding 0.3s;
+  padding: 0px;
+}
+
+.finstagram-post .photo img {
+  border-radius: 7%;
+}
+.finstagram-post .photo:hover img {
+  transition: border-radius 0.7s;
+  border-radius: 50%;
+}
+
+.endtext {
+  color: white;
+}
+.endtext:hover{
+  font-family: 'Literata', serif;
+  color: inherit;
+  
+}
+
+/* Course Instruction stuff */
+
+/* header {
+  background-color: #244751;
+  color: #E8FDFF;
+}
+body {
+  background-color: whitesmoke;
+}
+main {
+  background-color: white;
+  padding: 16px;
+}
+.finstagram-post {
+  margin-bottom: 48px;
+}
+
+.finstagram-post .user-info img{
+  border-radius: 50%;
+}
+ */
