@@ -1,4 +1,4 @@
-class CreateBaseTables < ActiveRecord::Migration[4.2]
+class CreateBaseTables < ActiveRecord::Migration
 
   def change
     create_table :users do |t|
