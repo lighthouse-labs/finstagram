@@ -1,25 +1,18 @@
 get '/' do
-    def humanized_time_ago(minutes)
-        return minutes
-        # your previous finstagram post code is up here
-  # add the following @finstagram_posts line
+  
 
-  @finstagram_posts = [@finstagram_post_shark, @finstagram_post_whale, @finstagram_post_marlin]
-
-    
-    end
     @finstagram_post_shark = {
-        username: "sharky_j",
-        avatar_url: "http://naserca.com/images/sharky_j.jpg",
-    photo_url: "http://naserca.com/images/shark.jpg",
-    humanized_time_ago: humanized_time_ago(15),
-    like_count: 0,
-    comment_count: 1,
-    comments: [{
-      username: "sharky_j",
-      text: "Out for the long weekend... too embarrassed to show y'all the beach bod!"
-    }]
-  }
+  username: "sharky_j",
+  avatar_url: "http://naserca.com/images/sharky_j.jpg",
+  photo_url: "http://naserca.com/images/shark.jpg",
+  humanized_time_ago: humanized_time_ago(15),
+  like_count: 0,
+  comment_count: 1,
+  comments: [{
+    username: "sharky_j",
+    text: "Out for the long weekend... too embarrassed to show y'all the beach bod!"
+  }]
+}
 
   @finstagram_post_whale = {
     username: "kirk_whalum",

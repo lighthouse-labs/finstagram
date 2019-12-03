@@ -17,11 +17,13 @@
         <span class="comment-count"><%= finstagram_post[:comment_count] %> comment</span>
       </div>
       <ul class="comments">
-        <li>
-          <p>
-            <%= finstagram_post[:comments][0][:username] %>: <%= finstagram_post[:comments][0][:text] %>
-          </p>
-        </li>
+        <% finstagram_post[:comments].each do |comment| %>
+          <li>
+            <p>
+              <%= comment[:username] %>: <%= comment[:text] %>
+            </p>
+          </li>
+        <% end %>
       </ul>
     </article>
   <% end %>
