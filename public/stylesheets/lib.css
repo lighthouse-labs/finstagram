@@ -113,7 +113,9 @@ main {
 }
 
 .form-group {
-  margin-bottom: 1em;
+
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  margin-bottom: 5px;
 }
 
 .new-comment input[type="text"] {

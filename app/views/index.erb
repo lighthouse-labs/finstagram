@@ -1,18 +1,30 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <% 3.times do %>
-    <%= @example_string + "<br>" %>
-    <% end %>
-
-    <%= "<p>one more "   + @example_string + "</p>"  %>
-    
-
-
-</body>
-</html>
+<header>
+  <h1>Finstagram</h1>
+</header>
+<main role="main">
+  <% @finstagram_posts.each do |finstagram_post| %>
+    <article class="finstagram-post">
+      <div class="user-info">
+        <img src="<%= finstagram_post.user.avatar_url %>" alt="<%= finstagram_post.user.username %>">
+        <h2><%= finstagram_post.user.username %></h2>
+        <h3><%= finstagram_post.humanized_time_ago %></h3>
+      </div>
+      <a class="photo" href="#">
+        <img src="<%= finstagram_post.photo_url %>" alt="finstagram post from <%= finstagram_post.user.username %>">
+      </a>
+      <div class="actions">
+        <%= finstagram_post.like_count %> likes
+        <span class="comment-count"><%= finstagram_post.comment_count %> comments</span>
+      </div>
+      <ul class="comments">
+        <% finstagram_post.comments.each do |comment| %>
+          <li>
+            <p>
+              <%= comment.user.username %>: <%= comment.text %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    </article>
+  <% end %>
+</main>
