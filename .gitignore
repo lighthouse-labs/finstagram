@@ -1,2 +1,3 @@
-db/db.sqlite3
-finstagram_post = FinstagramPost.new({ photo_url: "http://naserca.com/images/shark.jpg" })
+class FinstagramPost < ActiveRecord::Base
+
+end
