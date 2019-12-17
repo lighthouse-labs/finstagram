@@ -1,0 +1,15 @@
+<header>
+  <h1>Finstagram</h1>
+  <div class="login-info">
+    <% if current_user %>
+      <%= current_user.username %>
+      <a href="/logout">Logout</a>
+    <% else %>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    <% end %>
+  </div>
+</header>
+<main role="main">
+<%= erb(:"shared/finstagram_post", { locals: { finstagram_post: @finstagram_post, allow_new_comment: true }}) %>
+</main>
