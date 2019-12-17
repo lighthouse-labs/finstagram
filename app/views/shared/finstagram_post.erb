@@ -4,14 +4,19 @@
     <h2><%= finstagram_post.user.username %></h2>
     <h3><%= finstagram_post.humanized_time_ago %></h3>
   </div>
- <% if current_user && allow_new_comment %>
-  <%= erb(:"shared/new_comment", { locals: { finstagram_post: finstagram_post }}) %>
-<% end %>
-  <a class="photo" href="/finstagram_posts/<%= finstagram_post.id %>">
+
+
+
+<a class="photo" href="/finstagram_posts/<%= finstagram_post.id %>">
  <div class="actions">
   <%= erb(:"shared/likes", { locals: { finstagram_post: finstagram_post }}) %>
   <span class="comment-count"><%= finstagram_post.comment_count %> comments</span>
 </div>
+
+<div>
+<% if current_user && allow_new_comment %>
+  <%= erb(:"shared/new_comment", { locals: { finstagram_post: finstagram_post }}) %>
+<% end %>
   <ul class="comments">
     <% finstagram_post.comments.each do |comment| %>
       <li>
@@ -21,4 +26,6 @@
       </li>
     <% end %>
   </ul>
+</div>
+
 </article>

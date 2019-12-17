@@ -26,3 +26,7 @@ We suggest our students use [GitPod](https://www.gitpod.io/) to work on this pro
 4. You'll see _Open Preview_ and _Open Browser_, either of which will allow you to open your project in a new window or tab or preview pane. Go ahead and click on your preference (or try both at first to see which one you prefer).
 
 You're now set up and ready to work on this project!
+
+
+### Database create
+bundle exec rake db:migrate

@@ -26,12 +26,4 @@
 
   <!-- show like count without any form -->
   <%= finstagram_post.like_count %> likes
-
-
-<!-- method POST – huh? -->
-<form action="/likes/<%= like.id %>" method="POST">
-
-
-  <!-- weird hidden "_method" "delete" -->
-  <input name="_method" type="hidden" value="delete">
-  <% end %>
+<% end %>
