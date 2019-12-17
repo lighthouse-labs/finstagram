@@ -1,0 +1,36 @@
+header {
+  background-color: #244751;
+  color: #E8FDFF;
+}
+
+body {
+  background-color: whitesmoke;
+}
+main {
+  background-color: white;
+  padding: 16px;
+}
+
+
+.my-class-name finstagram-post {
+  margin-bottom: 48px;
+}
+#tanya { color: violet }
+
+.finstagram-post .user-info img {
+  border-radius: 100%;
+}
+body {
+     font-family: 'Pacifico', cursive;
+}
+
+h3 {color: brown}
+h2 {color: black}
+a.photo:hover{ 
+    padding: 10px; transition: padding 0.5s; }
+a.photo{
+    transition: padding 0.5s;
+  }
+  a.photo:hover{
+    padding: 10px;
+  }

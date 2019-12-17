@@ -1,0 +1,22 @@
+<% if current_user %>
+  <div class="new-finstagram-post">
+    <a href="/finstagram_posts/new" class="button">New Post</a>
+  </div>
+<% end %>
+<header>
+  <h1>Finstagram</h1>
+  <div class="login-info">
+    <% if current_user %>
+      <%= current_user.username %>
+      <a href="/logout">Logout</a>
+    <% else %>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    <% end %>
+  </div>
+</header>
+<main role="main">
+ <% @finstagram_posts.each do |finstagram_post| %>
+   <%= erb(:"shared/finstagram_post", { locals: { finstagram_post: finstagram_post, allow_new_comment: false }}) %>
+<% end %>
+</main>
