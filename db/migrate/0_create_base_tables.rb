@@ -1,6 +1,6 @@
-class CreateBaseTables < ActiveRecord::Migration
+class CreateBaseTables < ActiveRecord::Migration[5.2]
 
-  def change
+ def change
     create_table :users do |t|
       t.string :username
       t.string :avatar_url
@@ -17,14 +17,14 @@ class CreateBaseTables < ActiveRecord::Migration
 
     create_table :comments do |t|
       t.references :user
-      t.references :finstagram_post
+      t.references :post
       t.text :text
       t.timestamps
     end
 
     create_table :likes do |t|
       t.references :user
-      t.references :finstagram_post
+      t.references :post
       t.timestamps
     end
 
