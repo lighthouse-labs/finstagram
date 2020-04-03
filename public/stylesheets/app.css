@@ -1,0 +1,42 @@
+a.photo{
+    transition: padding 0.5s;
+}
+
+a.photo:hover{
+    padding:  10px
+}
+
+
+
+body{
+    font-family: 'Trade Winds', cursive;
+}
+
+
+
+.finstagram-post .user-info img{
+    border-radius: 50%; 
+}
+
+
+
+.finstagram-post{
+    margin-bottom: 48px;
+}
+
+
+main{
+    background-color: white;
+    padding: 16px;
+}
+
+
+body{
+    background-color: whitesmoke;
+}
+
+
+header{
+    background-color: #244751;
+    color: #E8FDFF;
+}
