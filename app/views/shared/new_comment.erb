@@ -1,0 +1,13 @@
+<form class="new-comment" action="/comments" method="POST">
+  <div class="form-group">
+    <input type="text" id="text" name="text" placeholder="Comment">
+  </div>
+  <input type="hidden" id="finstagram_post_id" name="finstagram_post_id" value="<%= finstagram_post.id %>">
+  <div class="form-group">
+    <button class="button" type="submit">Submit</button>
+  </div>
+</form>
+
+<% if current_user && allow_new_comment %>
+  <%= erb(:"shared/new_comment", { locals: { finstagram_post: finstagram_post }}) %>
+<% end %>

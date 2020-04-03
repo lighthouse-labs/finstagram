@@ -11,6 +11,7 @@
     <%= finstagram_post.like_count %> likes
     <span class="comment-count"><%= finstagram_post.comment_count %> comments</span>
   </div>
+    <%= erb(:"shared/new_comment", { locals: { finstagram_post: finstagram_post }}) %>
   <ul class="comments">
     <% finstagram_post.comments.each do |comment| %>
       <li>
