@@ -2,6 +2,7 @@ header {
     background-color: #244751;
     color: #E8FDFF;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 body{
@@ -11,12 +12,13 @@ body{
 main{
     background-color: white;
     padding: 16px;
-    width: 50%;
+    width: 65%;
     margin: auto;
 }
 
 .finstagram-post{
     margin-bottom: 48px;
+    margin-top: 10px;
 }
 
 .finstagram-post .user-info img{
