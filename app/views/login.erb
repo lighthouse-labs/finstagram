@@ -1,13 +1,15 @@
-<% @error_message if @error_message %>
+<h2>Login to Finstagram</h2>
 
-<form action="/login" method="POST">
+<%= @error_message if @error_message %>
+
+<form action="/login" method="post">
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" id="username" name="username">
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" name"password">
+        <input type="password" id="password" name="password">
     </div>
     <div class="form-group">
         <button type="submit">Login</button>
