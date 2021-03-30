@@ -1,0 +1,24 @@
+<% if current_user %>
+
+  <% if like = current_user.likes.find_by({ finstagram_post_id: finstagram_post.id }) %>
+
+    <form action="/likes/<%= like.id %>" method="POST">
+      <input name="_method" type="hidden" value="delete">
+      <button class="button user-like" type="submit">
+        <%= finstagram_post.like_count %> likes
+      </button>
+    </form>
+
+  <% else %>
+
+    <form action="/likes" method="POST">
+      <input type="hidden" name="finstagram_post_id" value="<%= finstagram_post.id %>">
+      <button class="button" type="submit">
+        <%= finstagram_post.like_count %> likes
+      </button>
+    </form>
+  <% end %>
+<% else %>
+
+  <%= finstagram_post.like_count %> likes
+<% end %>
