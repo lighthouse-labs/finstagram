@@ -1,0 +1,24 @@
+header {
+    background-color: #E8EDDF;
+    color: #4A6FA5;
+    margin-left: 25%;   
+}
+
+body {
+    background-color: #E8EDDF;
+    font-family: 'Inconsolata', monospace;
+}
+
+main {
+    background-color: #CFDBD5;
+    padding: 16px;
+    color:#4A6FA5; 
+}
+
+.finstagram-post{
+    margin-bottom: 48px;
+}
+
+.finstagram-post .user-info img {
+    border-radius: 75%;
+  }
