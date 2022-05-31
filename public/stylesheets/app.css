@@ -22,3 +22,18 @@ main {
 .finstagram-post .user-info img {
     border-radius: 75%;
   }
+
+a.photo{
+    transition: padding 0.5s;
+  }
+
+a.photo:hover{
+    padding: 10px;
+  }
+
+.comments {
+    background-color:#4A6FA5;
+    color: white;
+    padding: 1px;
+    padding-left: 10px;
+}
