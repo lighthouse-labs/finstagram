@@ -58,6 +58,7 @@ main {
   background-color: white;
   border: solid 1px #244751;
   display: inline-block;
+  margin-top: .5em;
 }
 
 .finstagram-post > * {

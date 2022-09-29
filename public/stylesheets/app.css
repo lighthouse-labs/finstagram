@@ -1,0 +1,39 @@
+header {
+    background-color: #244751;
+    color: #E8FDFF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+main{
+    background-color: white;
+    padding: 16px;
+    width: 50%;
+    margin: auto;
+}
+
+.finstagram-post{
+    margin-bottom: 48px;
+    margin-top: 10px;
+}
+
+.finstagram-post .user-info img{
+    border-radius: 50%;
+}
+
+body{
+    font-family: 'Lato';
+}
+
+a.photo{
+    transition: padding 10px;
+  }
+
+a.photo:hover{
+    padding: 10px;
+}
+
