@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full
+FROM gitpod/workspace-full:2023-02-27-14-39-56
 USER gitpod
 
 # Install the Ruby version specified in '.ruby-version'
