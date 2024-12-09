@@ -8,7 +8,10 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/contrib/all' # Requires cookies, among other things
 
-require 'pry'
+# Load development dependencies
+if Sinatra::Application.development?
+  require 'pry'
+end
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
@@ -19,7 +22,7 @@ configure do
   set :server, :puma
 
   enable :sessions
-  set :session_secret, ENV['SESSION_KEY'] || 'f06bbeb1f88cce86fb7bf89b6c2d8aa88e2ebcd9c7a8bce0e27d3e6b4c8e6dc3'
+  set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(64) }
 
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
